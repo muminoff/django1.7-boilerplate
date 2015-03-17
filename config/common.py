@@ -104,7 +104,7 @@ class Common(Configuration):
 
     # DATABASE CONFIGURATION
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
-    DATABASES = values.DatabaseURLValue('postgres://newsdig:newsdig@localhost/newsdig')
+    DATABASES = values.DatabaseURLValue('postgres://muminoff@localhost/muminoff')
     # END DATABASE CONFIGURATION
 
 
