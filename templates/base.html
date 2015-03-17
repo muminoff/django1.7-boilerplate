@@ -1,0 +1,53 @@
+{% load staticfiles i18n %}<!DOCTYPE html>
+<html lang="en" ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}dignews{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    {% block css %}
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+
+    <!-- This file store project specific CSS -->
+    <link href="{% static 'css/project.css' %}" rel="stylesheet">
+    {% endblock %}
+
+  </head>
+
+  <body>
+
+      <div class="container">
+
+        <div class="row">
+          <div class="two columns">
+            <a href="{% url 'home' %}">Home</a>
+          </div>
+          <div class="ten columns">
+          {% block content %}
+          <p>This is content.</p>
+          {% endblock content %}
+          </div>
+        </div>
+
+      </div>
+
+    {% block modal %}{% endblock modal %}
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    {% block javascript %}
+      <!-- place project specific Javascript in this file -->
+      <script src="{% static 'js/project.js' %}"></script>
+    {% endblock javascript %}
+  </body>
+</html>
+ 
